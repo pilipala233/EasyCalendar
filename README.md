@@ -9,7 +9,7 @@
 
 ```html
 <!-- 在 HTML 文件中引入日历组件 -->
-<script src="path/to/custom-calendar.js"></script>
+<script src="src/index.js"></script>
 ```
 其中需要说明的是，引入顺序会对代码功能有一定的影响，这是无法避免的：
 
