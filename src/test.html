@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <div>
+
+        <a-calendar id="cal" config="123">
+            <!-- 使用 Shadow DOM 封装插槽内容，并在插槽内容内定义样式 -->
+            <div slot="customBox">
+                <style>
+                    /* 在插槽内容内定义样式 */
+                    .custom-box-content {
+                        color: red;
+                        font-size: 18px;
+                    }
+                </style>
+                <!-- 插入到插槽的内容 -->
+                <div class="custom-box-content">这是插入到 customBox 插槽中的内容</div>
+            </div>
+        </a-calendar>
+    </div>
+
+    <script>
+        var cal = document.getElementById('cal');
+        //属性修改，内部会进行监听
+        cal.setAttribute('config', '233');
+
+
+        cal.addEventListener('init', (event) => {
+            const { year, month } = event.detail;
+            console.log('Year:', year, 'Month:', month);
+
+        });
+        cal.addEventListener('dayClick', (event) => {
+            const selectedDay = event.detail;
+            console.log('Selected Day:', selectedDay);
+
+        });
+        cal.addEventListener('change', (event) => {
+            const { year, month } = event.detail;
+            console.log('Year:', year, 'Month:', month);
+
+        });
+    </script>
+    <script src="./index.js"></script>
+</body>
+
+</html>
