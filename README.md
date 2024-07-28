@@ -72,5 +72,4 @@ calendar.addEventListener('change', (event) => {
 ## 贡献
 欢迎为该项目作出贡献！如果您发现问题或者有改进的建议，请提交 issue 或者 pull 请求。
 
-## 许可证
-该项目采用 MIT 许可证。详细信息请参阅 LICENSE 文件。
+
